@@ -1,0 +1,96 @@
+        body {
+            font-family: 'Source Code Pro', monospace;
+            background-color: #eef2f7;
+            color: #222;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px 20px;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: none;
+            overflow: hidden;
+            z-index: 1000;
+        }
+        .brand {
+            font-weight: bold;
+            font-size: 22px;
+            flex: 1;
+            text-align: left;
+            color: #d81b60;
+            text-shadow: 2px 2px 4px rgba(216, 27, 96, 0.3);
+        }
+        .collections {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-grow: 1;
+            position: absolute;
+            left: 40%;
+            transform: translateX(-50%);
+        }
+        .collections a {
+            font-size: 22px;
+            font-style: italic;
+            color: #0000EE;
+            text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.5);
+        }
+        .collections a.selected {
+            text-decoration: underline;
+            font-size: 24px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        @keyframes scrollText {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(-10px); }
+            100% { transform: translateX(0); }
+        }
+        .collection-name {
+            font-weight: bold;
+            font-size: 22px;
+            color: #d81b60;
+            position: absolute;
+            right: 60px;
+            white-space: nowrap;
+            max-width: 30%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            text-shadow: 2px 2px 4px rgba(216, 27, 96, 0.3);
+            animation: scrollText 2s infinite ease-in-out;
+        }
+        nav a {
+            text-decoration: none;
+        }
+        main {
+            margin-top: 100px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .gallery img {
+            width: 70%;
+            height: auto;
+            margin: 40px 0 10px 0;
+            padding: 0;
+            background: #eef2f7;
+        }
+        .gallery p {
+            font-style: italic;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
