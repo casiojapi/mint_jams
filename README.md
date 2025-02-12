@@ -1,0 +1,1 @@
+el todo es ver como hosteo esto con ghpages, fijarme si puedo chupar una carpeta o tengo que armar una branch para comer el estatico, no se. Checkear eso, deployear static, testear flows de cambio entre colecciones, y una vez que ande todo joya le pongo el subdominio o algo asi y a seleccionar las fotitos (dale gordo)
