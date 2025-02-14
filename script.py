@@ -7,6 +7,16 @@ TEMPLATE = """<!DOCTYPE html>
     <meta charset=\"UTF-8\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
     <title>{collection_name}</title>
+  <script>
+  // si, es javascript. pero es el unico que puede resolver este problema. Asi que si no te gusta enjoyear las gains de las vim motions usa tu JSBLOCKER mhmhmhmhmhmhmmmmmmmmmmmmmmm *ACTIVANDO JSBLOCKER* (un gordo cosplay de sailor moon gritando mientras activa su increible y vegano escudo con rubies (main taric)) AAAAAAKKKKKKKKKKKKKKKKKDDDDTTHCHHTTTUAAAALLLLYYYYYYYYYY podrias.... mHHMMMMmm... hacerlooo....>>>GNGNNGNG.....,.,, CLNP..,,..,IPX/SPXXXXXXXXXX..........
+        document.addEventListener('keydown', function(event) {{
+            if (event.key === 'j') {{
+                window.scrollBy({{ top: 150, behavior: 'smooth' }});
+            }} else if (event.key === 'k') {{
+                window.scrollBy({{ top: -200, behavior: 'smooth' }});
+            }}
+        }});
+    </script>
     <link rel=\"stylesheet\" href=\"styles.css\">
 </head>
 <body>
@@ -22,7 +32,8 @@ TEMPLATE = """<!DOCTYPE html>
             {images}
         </section>
     </main>
-</body>
+ <div class=\"help-text\">use j ↓ k ↑ to move</div>
+ </body>
 </html>"""
 
 def load_collections():
