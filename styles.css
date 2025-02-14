@@ -21,7 +21,18 @@
             overflow: hidden;
             z-index: 1000;
         }
+
+
         .brand {
+            font-weight: bold;
+            font-size: 22px;
+            position: fixed;
+            top: 10px;
+            left: 20px;
+            color: #d81b60;
+            text-shadow: 2px 2px 4px rgba(216, 27, 96, 0.3);
+        }
+/*        .brand {
             font-weight: bold;
             font-size: 22px;
             flex: 1;
@@ -29,31 +40,68 @@
             color: #d81b60;
             text-shadow: 2px 2px 4px rgba(216, 27, 96, 0.3);
         }
-        .collections {
+*/
+        
+    .collections {
+            position: fixed;
+            top: 30%;
+            left: 20px;
             display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-grow: 1;
-            position: absolute;
-            left: 40%;
-            transform: translateX(-50%);
+            flex-direction: column;
+            align-items: flex-start;
         }
-        .collections a {
-            font-size: 22px;
-            font-style: italic;
-            color: #0000EE;
-            text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.5);
-        }
-        .collections a.selected {
-            text-decoration: underline;
-            font-size: 24px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-        }
+        /*.collections {
+            top: 50px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }*/
         @keyframes scrollText {
             0% { transform: translateX(0); }
             50% { transform: translateX(-10px); }
             100% { transform: translateX(0); }
         }
+
+        .collections a {
+            font-size: 22px;
+            font-family: monospace;
+            font-weight: bold;
+            font-style: italic;
+            color: #0000EE;
+            text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.5);
+            text-decoration: none;
+            margin-bottom: 10px;
+            animation: scrollText 2s infinite ease-in-out;
+        }
+
+        .collections a.selected {
+            text-decoration: underline;
+            font-size: 24px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+
+        // eee jagger eee jagger toca satisfaction jagger.... eeeeeee la tocoooo locoo viste..... la toco le dije yoooo.... eeee grande jaggeeeeer eee te quiero jaggeeeeer
+        @keyframes moveLikeJagger {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px) rotate(-1deg); }
+            50% { transform: translateX(5px) rotate(1deg); }
+            75% { transform: translateX(-5px) rotate(-1deg); }
+            100% { transform: translateX(0); }
+        }
+
+       .collection-name {
+            font-weight: bold;
+            font-size: 22px;
+            position: fixed;
+            top: 10px;
+            right: 60px;
+            color: #000;
+            animation: scrollText 3s infinite ease-in-out;
+            //animation: moveLikeJagger 1.5s infinite ease-in-out;
+        }
+/*
         .collection-name {
             font-weight: bold;
             font-size: 22px;
@@ -67,6 +115,7 @@
             text-shadow: 2px 2px 4px rgba(216, 27, 96, 0.3);
             animation: scrollText 2s infinite ease-in-out;
         }
+        */
         nav a {
             text-decoration: none;
         }
@@ -89,12 +138,13 @@
             max-height: 80vh;
             margin: 40px 0 10px 0;
             background: #eef2f7;
-            padding-top: 4em;
+            padding-top: 5.5em;
         }
+
 
         .gallery p {
             font-style: italic;
             font-size: 20px;
             margin-bottom: 30px;
-            padding-bottom: 4em;
+            padding-bottom: 5.5em;
         }

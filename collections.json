@@ -3,5 +3,11 @@
         "public": true,
         "folderpath": "collections/2021",
         "up_to": 22
+    },
+
+    "test": {
+        "public": true,
+        "folderpath": "collections/test",
+        "up_to": 22
     }
 }
