@@ -78,7 +78,7 @@
             text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.5);
             text-decoration: none;
             margin-bottom: 10px;
-            animation: scrollText 2s infinite ease-in-out;
+            animation: scrollText 5s infinite ease-in-out;
         }
 
         .collections a.selected {
