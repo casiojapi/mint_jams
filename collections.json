@@ -5,9 +5,9 @@
         "up_to": 22
     },
 
-    "test": {
+    "2021-mono": {
         "public": true,
-        "folderpath": "collections/test",
+        "folderpath": "collections/2021-mono",
         "up_to": 22
     }
 }

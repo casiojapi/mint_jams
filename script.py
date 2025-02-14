@@ -67,7 +67,7 @@ def generate_html():
             f.write(html_content)
     
 if __name__ == "__main__":
-    os.makedirs("output", exist_ok=True)
+    os.makedirs("./", exist_ok=True)
     generate_html()
     print("Collection pages generated successfully.")
 

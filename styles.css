@@ -140,9 +140,9 @@
         }
 
         .gallery img {
-            max-width: 70%;
+            max-width: 85%;
             height: auto;
-            max-height: 80vh;
+            max-height: 82vh;
             margin: 40px 0 10px 0;
             background: #eef2f7;
             padding-top: 5.5em;
