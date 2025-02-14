@@ -26,7 +26,7 @@ TEMPLATE = """<!DOCTYPE html>
         <nav class=\"collections\">
             {collections_links}
         </nav>
-        <span class=\"collection-name\">{collection_name}</span>
+        <span class=\"collection-name\">"{collection_name}"</span>
     </header>
     <main>
         <section class=\"gallery\">

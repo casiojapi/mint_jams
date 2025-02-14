@@ -52,8 +52,9 @@
             position: fixed;
             top: 10px;
             left: 20px;
-            color: #d81b60;
-            text-shadow: 2px 2px 4px rgba(216, 27, 96, 0.3);
+            color: #ff1360;
+            animation: scrollText 15s infinite ease-in-out;
+            //text-shadow: 2px 2px 4px rgba(216, 27, 96, 0.3);
         }
         
         .help-text {
@@ -99,7 +100,7 @@
             position: fixed;
             bottom: 10px;
             font-size: 20px;
-            right: 60px;
+            right: 20px;
             color: #000;
             animation: scrollText 20s infinite ease-in-out;
             //animation: moveLikeJagger 1.5s infinite ease-in-out;
