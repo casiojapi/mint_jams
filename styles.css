@@ -59,9 +59,9 @@
         .help-text {
             position: fixed;
             //bottom: 24px;
-            top: 24px;
-            right: 34px;
-            font-size: 22px;
+            top: 44px;
+            right: 18px;
+            font-size: 20px;
             font-family: monospace;
             color: #f14;
             font-weight: bold;
