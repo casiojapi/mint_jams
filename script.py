@@ -7,7 +7,7 @@ TEMPLATE = """<!DOCTYPE html>
     <meta charset=\"UTF-8\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
     <title>{collection_name}</title>
-    <link rel=\"stylesheet\" href=\"../../styles.css\">
+    <link rel=\"stylesheet\" href=\"styles.css\">
 </head>
 <body>
     <header>
@@ -42,7 +42,7 @@ def generate_html():
             continue
 
         image_tags = "".join(
-            f'<img src="../../{data["folderpath"]}/{img}" alt="{img}"><p>{img}</p>'
+            f'<img src="{data["folderpath"]}/{img}" alt="{img}"><p>{img}</p>'
             for img in sorted(os.listdir(data["folderpath"]))[:data.get("up_to", 20)]
         )
 
@@ -52,7 +52,7 @@ def generate_html():
             images=image_tags
         )
 
-        with open(f"output/{name}.html", "w") as f:
+        with open(f"{name}.html", "w") as f:
             f.write(html_content)
     
 if __name__ == "__main__":
