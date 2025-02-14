@@ -1,3 +1,4 @@
+import re
 import os
 import json
 
@@ -36,6 +37,13 @@ TEMPLATE = """<!DOCTYPE html>
  </body>
 </html>"""
 
+def sanitize_filename(name):
+    """Convert collection name to a safe filename: lowercase, hyphens, no spaces or special chars."""
+    name = name.lower()  # Convert to lowercase
+    name = re.sub(r'[()\s~]+', '-', name).lstrip('-')
+    #name = re.sub(r'[^a-z0-9-_]', '', name)  # Remove non-alphanumeric characters except hyphens/underscores
+    return name
+
 def load_collections():
     with open("collections.json", "r") as f:
         return json.load(f)
@@ -44,13 +52,15 @@ def generate_html():
     collections = load_collections()
     
     all_links = "".join(
-        f'<a href="{name}.html" class="{"selected" if data["public"] else ""}">[[ {name} ]]</a>'
+        f'<a href="{sanitize_filename(name)}.html" class="{"selected" if data["public"] else ""}">[[ {name} ]]</a>'
         for name, data in collections.items() if data["public"]
     )
 
     for name, data in collections.items():
         if not data["public"]:
             continue
+
+        file_name = sanitize_filename(name)
 
         image_tags = "".join(
             f'<img src="{data["folderpath"]}/{img}" alt="{img}"><p>{img}</p>'
@@ -63,11 +73,10 @@ def generate_html():
             images=image_tags
         )
 
-        with open(f"{name}.html", "w") as f:
+        with open(f"{file_name}.html", "w") as f:
             f.write(html_content)
     
 if __name__ == "__main__":
     os.makedirs("./", exist_ok=True)
     generate_html()
     print("Collection pages generated successfully.")
-

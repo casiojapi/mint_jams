@@ -23,6 +23,29 @@
             z-index: 1000;
         }
 
+        @keyframes scrollText {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            50% { transform: translateX(0px); }
+            75% { transform: translateX(10px); }
+            100% { transform: translateX(0); }
+        }
+        
+        @keyframes reloco {
+            0% { transform: rotate(0deg); }
+            50% { transform: rotate(-3deg); }
+            100% { transform: rotate(0deg); }
+        }
+        
+        // eee jagger eee jagger toca satisfaction jagger.... eeeeeee la tocoooo locoo viste..... la toco le dije yoooo.... eeee grande jaggeeeeer eee te quiero jaggeeeeer
+        @keyframes moveLikeJagger {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px) rotate(-1deg); }
+            50% { transform: translateX(5px) rotate(1deg); }
+            75% { transform: translateX(-5px) rotate(-1deg); }
+            100% { transform: translateX(0); }
+        }
+
         .brand {
             font-weight: bold;
             font-size: 22px;
@@ -55,76 +78,37 @@
             align-items: flex-start;
         }
 
-        @keyframes scrollText {
-            0% { transform: translateX(0); }
-            25% { transform: translateX(-10px); }
-            50% { transform: translateX(0px); }
-            75% { transform: translateX(10px); }
-            100% { transform: translateX(0); }
-        }
-        
-        @keyframes reloco {
-            0% { transform: rotate(0deg); }
-            50% { transform: rotate(-3deg); }
-            100% { transform: rotate(0deg); }
-        }
-
         .collections a {
-            font-size: 22px;
+            font-size: 20px;
             font-family: monospace;
-            font-weight: bold;
             font-style: italic;
             color: #0000EE;
             text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.5);
             text-decoration: none;
             margin-bottom: 10px;
-            animation: scrollText 5s infinite ease-in-out;
+            animation: scrollText 7s infinite ease-in-out;
         }
 
         .collections a.selected {
             text-decoration: underline;
-            font-size: 24px;
+            font-size: 20px;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
 
-
-        // eee jagger eee jagger toca satisfaction jagger.... eeeeeee la tocoooo locoo viste..... la toco le dije yoooo.... eeee grande jaggeeeeer eee te quiero jaggeeeeer
-        @keyframes moveLikeJagger {
-            0% { transform: translateX(0); }
-            25% { transform: translateX(-5px) rotate(-1deg); }
-            50% { transform: translateX(5px) rotate(1deg); }
-            75% { transform: translateX(-5px) rotate(-1deg); }
-            100% { transform: translateX(0); }
-        }
-
        .collection-name {
-            font-weight: bold;
-            font-size: 22px;
             position: fixed;
             bottom: 10px;
+            font-size: 20px;
             right: 60px;
             color: #000;
             animation: scrollText 20s infinite ease-in-out;
             //animation: moveLikeJagger 1.5s infinite ease-in-out;
         }
-/*
-        .collection-name {
-            font-weight: bold;
-            font-size: 22px;
-            color: #d81b60;
-            position: absolute;
-            right: 60px;
-            white-space: nowrap;
-            max-width: 30%;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            text-shadow: 2px 2px 4px rgba(216, 27, 96, 0.3);
-            animation: scrollText 2s infinite ease-in-out;
-        }
-        */
+
         nav a {
             text-decoration: none;
         }
+
         main {
             margin-top: 100px;
             padding: 20px;
@@ -132,11 +116,14 @@
             flex-direction: column;
             align-items: center;
         }
+        
         .gallery {
-            left: 10%; 
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+            margin-left: 7%; /* Moves it slightly to the right */
+            width: 100%;
         }
 
         .gallery img {
@@ -144,7 +131,6 @@
             height: auto;
             max-height: 82vh;
             margin: 40px 0 10px 0;
-            background: #eef2f7;
             padding-top: 5.5em;
         }
 

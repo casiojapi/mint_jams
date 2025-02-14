@@ -1,13 +1,25 @@
 {
-    "2021": {
+    "street ~21": {
         "public": true,
-        "folderpath": "collections/2021",
+        "folderpath": "collections/street-2021",
+        "up_to": 22
+    },
+    
+    "street (mono) ~21": {
+        "public": true,
+        "folderpath": "collections/street-mono-2021",
         "up_to": 22
     },
 
-    "2021-mono": {
+    "misc ~21": {
         "public": true,
-        "folderpath": "collections/2021-mono",
+        "folderpath": "collections/random-2021",
+        "up_to": 22
+    },
+
+    "cordoba (mono) ~21": {
+        "public": true,
+        "folderpath": "collections/cordoba",
         "up_to": 22
     }
 }
