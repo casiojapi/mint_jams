@@ -19,6 +19,11 @@ TEMPLATE = """<!DOCTYPE html>
         }});
     </script>
     <link rel=\"stylesheet\" href=\"styles.css\">
+  <style>
+        body {{
+            background-color: {background_color};
+        }}
+    </style>
 </head>
 <body>
     <header>
@@ -33,15 +38,14 @@ TEMPLATE = """<!DOCTYPE html>
             {images}
         </section>
     </main>
- <div class=\"help-text\">use j ↓ k ↑ to move</div>
+ <div class=\"help-text\">use j ↓ k ↑ to move<br><br>go fullscreen: press F11</div>
  </body>
 </html>"""
 
 def sanitize_filename(name):
     """Convert collection name to a safe filename: lowercase, hyphens, no spaces or special chars."""
-    name = name.lower()  # Convert to lowercase
+    name = name.lower()
     name = re.sub(r'[()\s~]+', '-', name).lstrip('-')
-    #name = re.sub(r'[^a-z0-9-_]', '', name)  # Remove non-alphanumeric characters except hyphens/underscores
     return name
 
 def load_collections():
@@ -61,6 +65,7 @@ def generate_html():
             continue
 
         file_name = sanitize_filename(name)
+        background_color = data.get("background", "#eef2f7")  # Default color if not specified
 
         image_tags = "".join(
             f'<img src="{data["folderpath"]}/{img}" alt="{img}"><p>{img}</p>'
@@ -70,7 +75,8 @@ def generate_html():
         html_content = TEMPLATE.format(
             collection_name=name,
             collections_links=all_links,
-            images=image_tags
+            images=image_tags,
+            background_color=background_color
         )
 
         with open(f"{file_name}.html", "w") as f:

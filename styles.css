@@ -50,9 +50,10 @@
             font-weight: bold;
             font-size: 22px;
             position: fixed;
-            top: 10px;
+            text-shadow: 2px 2px 3px rgba(0, 0, 230, 0.71);
+            top: 20px;
             left: 20px;
-            color: #ff1360;
+            color: #f00;
             animation: scrollText 15s infinite ease-in-out;
             //text-shadow: 2px 2px 4px rgba(216, 27, 96, 0.3);
         }
@@ -62,9 +63,9 @@
             //bottom: 24px;
             top: 44px;
             right: 18px;
-            font-size: 20px;
+            font-size: 17px;
             font-family: monospace;
-            color: #f14;
+            color: #f02;
             font-weight: bold;
             font-style: italic;
             animation: reloco 2s infinite ease-in-out;
@@ -84,7 +85,7 @@
             font-family: monospace;
             font-style: italic;
             color: #0000EE;
-            text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.5);
+            text-shadow: 2px 2px 4px rgba(255, 0, 0, 1);
             text-decoration: none;
             margin-bottom: 10px;
             animation: scrollText 7s infinite ease-in-out;
@@ -93,15 +94,17 @@
         .collections a.selected {
             text-decoration: underline;
             font-size: 20px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            text-shadow: 2px 2px 5px rgba(255, 0, 0, 1);
         }
 
        .collection-name {
             position: fixed;
+            font-weight: bold;
             bottom: 10px;
-            font-size: 20px;
+            font-size: 15px;
             right: 20px;
-            color: #000;
+            text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
+            color: #f01;
             animation: scrollText 20s infinite ease-in-out;
             //animation: moveLikeJagger 1.5s infinite ease-in-out;
         }

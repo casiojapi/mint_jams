@@ -1,8 +1,21 @@
 {
-    "street ~21": {
+    "cordoba (mono) ~21": {
         "public": true,
+        "folderpath": "collections/cordoba",
+        "up_to": 22
+    },
+
+    "street ~21": {
+        "public": false,
         "folderpath": "collections/street-2021",
         "up_to": 22
+    },
+    
+    "kyoto night": {
+        "public": true,
+        "folderpath": "collections/kyoto-docu-night",
+        "up_to": 22,
+        "background": "#020005"
     },
     
     "street (mono) ~21": {
@@ -14,12 +27,6 @@
     "misc ~21": {
         "public": true,
         "folderpath": "collections/random-2021",
-        "up_to": 22
-    },
-
-    "cordoba (mono) ~21": {
-        "public": true,
-        "folderpath": "collections/cordoba",
         "up_to": 22
     }
 }
