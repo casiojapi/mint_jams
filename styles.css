@@ -1,146 +1,243 @@
-        body {
-            font-family: 'Source Code Pro', monospace;
-            background-color: #eef2f7;
-            color: #222;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            overflow-x: hidden;
-        }
+/* Base styles */
+body {
+    font-family: 'Source Code Pro', monospace;
+    background-color: #eef2f7;
+    color: #222;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden;
+}
 
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 10px 20px;
-            background: transparent;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: none;
-            overflow: hidden;
-            z-index: 1000;
-        }
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: none;
+    overflow: hidden;
+    z-index: 1000;
+}
 
-        @keyframes scrollText {
-            0% { transform: translateX(0); }
-            25% { transform: translateX(-10px); }
-            50% { transform: translateX(0px); }
-            75% { transform: translateX(10px); }
-            100% { transform: translateX(0); }
-        }
-        
-        @keyframes reloco {
-            0% { transform: rotate(0deg); }
-            50% { transform: rotate(-3deg); }
-            100% { transform: rotate(0deg); }
-        }
-        
-        // eee jagger eee jagger toca satisfaction jagger.... eeeeeee la tocoooo locoo viste..... la toco le dije yoooo.... eeee grande jaggeeeeer eee te quiero jaggeeeeer
-        @keyframes moveLikeJagger {
-            0% { transform: translateX(0); }
-            25% { transform: translateX(-5px) rotate(-1deg); }
-            50% { transform: translateX(5px) rotate(1deg); }
-            75% { transform: translateX(-5px) rotate(-1deg); }
-            100% { transform: translateX(0); }
-        }
+@keyframes scrollText {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(0px); }
+    75% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
 
-        .brand {
-            font-weight: bold;
-            font-size: 22px;
-            position: fixed;
-            text-shadow: 2px 2px 3px rgba(0, 0, 230, 0.71);
-            top: 20px;
-            left: 20px;
-            color: #f00;
-            animation: scrollText 15s infinite ease-in-out;
-            //text-shadow: 2px 2px 4px rgba(216, 27, 96, 0.3);
-        }
-        
-        .help-text {
-            position: fixed;
-            //bottom: 24px;
-            top: 44px;
-            right: 18px;
-            font-size: 17px;
-            font-family: monospace;
-            color: #f02;
-            font-weight: bold;
-            font-style: italic;
-            animation: reloco 2s infinite ease-in-out;
-        } 
+@keyframes reloco {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(-3deg); }
+    100% { transform: rotate(0deg); }
+}
 
-        .collections {
-            position: fixed;
-            top: 30%;
-            left: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
+/* eee jagger eee jagger toca satisfaction jagger.... eeeeeee la tocoooo locoo viste..... */
+@keyframes moveLikeJagger {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px) rotate(-1deg); }
+    50% { transform: translateX(5px) rotate(1deg); }
+    75% { transform: translateX(-5px) rotate(-1deg); }
+    100% { transform: translateX(0); }
+}
 
-        .collections a {
-            font-size: 20px;
-            font-family: monospace;
-            font-style: italic;
-            color: #0000EE;
-            text-shadow: 2px 2px 4px rgba(255, 0, 0, 1);
-            text-decoration: none;
-            margin-bottom: 10px;
-            animation: scrollText 7s infinite ease-in-out;
-        }
+.brand {
+    font-weight: bold;
+    font-size: 22px;
+    position: fixed;
+    text-shadow: 2px 2px 3px rgba(0, 0, 230, 0.71);
+    top: 20px;
+    left: 20px;
+    color: #f00;
+    animation: scrollText 15s infinite ease-in-out;
+}
 
-        .collections a.selected {
-            text-decoration: underline;
-            font-size: 20px;
-            text-shadow: 2px 2px 5px rgba(255, 0, 0, 1);
-        }
+.help-text {
+    position: fixed;
+    top: 44px;
+    right: 18px;
+    font-size: 17px;
+    font-family: monospace;
+    color: #f02;
+    font-weight: bold;
+    font-style: italic;
+    animation: reloco 2s infinite ease-in-out;
+}
 
-       .collection-name {
-            position: fixed;
-            font-weight: bold;
-            bottom: 10px;
-            font-size: 15px;
-            right: 20px;
-            text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
-            color: #f01;
-            animation: scrollText 20s infinite ease-in-out;
-            //animation: moveLikeJagger 1.5s infinite ease-in-out;
-        }
+.collections {
+    position: fixed;
+    top: 30%;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
-        nav a {
-            text-decoration: none;
-        }
+.collections a {
+    font-size: 20px;
+    font-family: monospace;
+    font-style: italic;
+    color: #3333FF; /* Brighter blue (previously #0000EE) */
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, 1);
+    text-decoration: none;
+    margin-bottom: 10px;
+    animation: scrollText 7s infinite ease-in-out;
+}
 
-        main {
-            margin-top: 100px;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .gallery {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-left: 7%; /* Moves it slightly to the right */
-            width: 100%;
-        }
+.collections a.selected {
+    text-decoration: underline;
+    font-size: 20px;
+    text-shadow: 2px 2px 5px rgba(255, 0, 0, 1);
+}
 
-        .gallery img {
-            max-width: 85%;
-            height: auto;
-            max-height: 82vh;
-            margin: 40px 0 10px 0;
-            padding-top: 5.5em;
-        }
+.collection-name {
+    position: fixed;
+    font-weight: bold;
+    bottom: 10px;
+    font-size: 15px;
+    right: 20px;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
+    color: #f01;
+    animation: scrollText 20s infinite ease-in-out;
+}
 
-        .gallery p {
-            font-style: italic;
-            font-size: 20px;
-            margin-bottom: 30px;
-            padding-bottom: 5.5em;
-        }
+nav a {
+    text-decoration: none;
+}
+
+main {
+    margin-top: 100px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 7%; /* Moves it slightly to the right */
+    width: 100%;
+}
+
+.gallery img {
+    max-width: 85%;
+    height: auto;
+    max-height: 82vh;
+    margin: 40px 0 10px 0;
+    padding-top: 5.5em;
+}
+
+.gallery p {
+    font-style: italic;
+    font-size: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 5.5em;
+    color: #FFFFFF; /* White text for captions */
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .brand {
+        position: static;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .collections {
+        position: static;
+        top: auto;
+        left: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .collections a {
+        font-size: 16px;
+        margin: 5px 10px;
+        animation: none;
+    }
+
+    .collections a.selected {
+        font-size: 16px;
+    }
+
+    .collection-name {
+        position: static;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .help-text {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        font-size: 14px;
+        animation: none;
+    }
+
+    main {
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .gallery {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .gallery img {
+        max-width: 95%;
+        max-height: 70vh;
+        margin: 20px 0 5px 0;
+        padding-top: 2em;
+    }
+
+    .gallery p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        padding-bottom: 2em;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .brand {
+        font-size: 16px;
+    }
+
+    .collections a {
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    .help-text {
+        font-size: 12px;
+        top: 5px;
+        right: 5px;
+    }
+
+    .gallery img {
+        max-width: 100%;
+        max-height: 60vh;
+    }
+
+    .gallery p {
+        font-size: 14px;
+    }
+}

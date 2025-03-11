@@ -2,31 +2,31 @@
     "cordoba (mono) ~21": {
         "public": true,
         "folderpath": "collections/cordoba",
-        "up_to": 22
+        "up_to": 22,
+        "dark": true
     },
-
     "street ~21": {
         "public": false,
         "folderpath": "collections/street-2021",
-        "up_to": 22
+        "up_to": 22,
+        "dark": false
     },
-    
     "kyoto night": {
         "public": true,
         "folderpath": "collections/kyoto-docu-night",
         "up_to": 22,
-        "background": "#020005"
+        "dark": true
     },
-    
     "street (mono) ~21": {
         "public": true,
         "folderpath": "collections/street-mono-2021",
-        "up_to": 22
+        "up_to": 22,
+        "dark": false
     },
-
     "misc ~21": {
         "public": true,
         "folderpath": "collections/random-2021",
-        "up_to": 22
+        "up_to": 22,
+        "dark": true
     }
 }
