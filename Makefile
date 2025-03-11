@@ -14,7 +14,7 @@ build: clean
 publish: build
 	git add .
 	git commit -m "NEW PICTURE UPDATE"
-	git push
+	git push origin master
 
 # Phony targets (not actual files)
 .PHONY: all clean build publish
